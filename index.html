@@ -2,75 +2,126 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JJ Enterprises</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         body {
-            font-family: Arial, sans-serif;
-            max-width: 700px;
-            margin: 40px auto;
-            padding: 0 20px;
-            color: #b22222; /* firebrick red text */
-            background-color: #fff; /* white background */
+            font-family: 'Roboto', sans-serif;
+            background-color: #ffffff;
+            color: #333;
         }
         header {
+            background-color: #b22222;
+            color: #fff;
+            padding: 40px 20px;
             text-align: center;
-            margin-bottom: 40px;
         }
         header h1 {
-            font-size: 2.5em;
+            font-size: 2.8em;
             margin-bottom: 10px;
-            color: #b22222;
         }
         header p {
             font-size: 1.2em;
-            color: #d32f2f; /* brighter red */
             font-style: italic;
         }
         section {
-            margin-bottom: 30px;
-            border-bottom: 2px solid #b22222;
-            padding-bottom: 10px;
+            padding: 40px 20px;
+            max-width: 1000px;
+            margin: auto;
         }
-        h2 {
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            background-color: #fff5f5;
+            transition: box-shadow 0.3s;
+        }
+        .card:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .card h3 {
             color: #b22222;
+            margin-bottom: 10px;
+        }
+        .image-banner {
+            width: 100%;
+            height: 300px;
+            background: url('https://via.placeholder.com/1200x300/ffcccc/000000?text=JJ+Enterprises') center/cover no-repeat;
+            margin-bottom: 40px;
         }
         footer {
+            background-color: #b22222;
+            color: #fff;
             text-align: center;
-            margin-top: 50px;
-            color: #b22222;
+            padding: 20px;
             font-size: 0.9em;
-            border-top: 1px solid #b22222;
-            padding-top: 10px;
         }
         a {
-            color: #d32f2f;
-            text-decoration: none;
+            color: #b22222;
         }
-        a:hover {
-            text-decoration: underline;
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2em;
+            }
+            .image-banner {
+                height: 200px;
+            }
         }
     </style>
 </head>
 <body>
+
     <header>
         <h1>JJ Enterprises</h1>
         <p>Connecting Opportunities, Delivering Success.</p>
     </header>
 
+    <div class="image-banner"></div>
+
     <section>
         <h2>About Us</h2>
-        <p>JJ Enterprises is your trusted brokerage partner, specializing in facilitating deals across all sectors including real estate, finance, commodities, and more. We connect buyers and sellers, investors and projects, providing expert guidance to maximize value and success in every transaction.</p>
+        <p>JJ Enterprises is a multi-sector brokerage firm offering expert services across real estate, finance, commodities, and industrial deals. We help clients connect with the right opportunities and facilitate successful transactions from start to finish.</p>
     </section>
 
     <section>
-        <h2>Contact</h2>
-        <p>Phone: <a href="tel:+9087357022">9087357022</a></p>
-        <p>Email: <a href="mailto:info@jjenterprises.com">info@jjenterprises.com</a></p>
-        <p>Address: Available upon request</p>
+        <h2>Our Services</h2>
+        <div class="services">
+            <div class="card">
+                <h3>Real Estate Brokerage</h3>
+                <p>Connecting buyers and sellers in residential and commercial property markets.</p>
+            </div>
+            <div class="card">
+                <h3>Financial Advisory</h3>
+                <p>Providing deal sourcing and funding guidance for investments and capital growth.</p>
+            </div>
+            <div class="card">
+                <h3>Import & Export</h3>
+                <p>Assisting trade partners in sourcing and transporting goods across borders.</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Contact Us</h2>
+        <p>📞 Phone: <a href="tel:+9087357022">9087357022</a></p>
+        <p>📧 Email: <a href="mailto:info@jjenterprises.com">info@jjenterprises.com</a></p>
+        <p>📍 Address: Available upon request</p>
     </section>
 
     <footer>
         &copy; 2025 JJ Enterprises. All rights reserved.
     </footer>
+
 </body>
 </html>
